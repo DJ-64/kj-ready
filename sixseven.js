@@ -26,7 +26,9 @@ submit.addEventListener("click", () => {
       q.textContent = 'question: fill in the blank "6_"';
       score++;
     } else {
+        if( score >=1) {
       score--;
+        }
     }
 
   } else if (q.textContent === 'question: fill in the blank "6_"') {
@@ -34,7 +36,9 @@ submit.addEventListener("click", () => {
       q.textContent = 'question: fill in the blank "___ seven"';
       score++;
     } else {
+        if( score >=1) {
       score--;
+        }
     }
 
   } else if (q.textContent === 'question: fill in the blank "___ seven"') {
@@ -42,9 +46,11 @@ submit.addEventListener("click", () => {
       q.textContent = "question: who is the 67 kid?";
       score++;
     } else {
+        if( score >=1) {
       score--;
+        }
     }
   }
   document.cookie = "score=" + score + "; path=/"
-  showWarning(`score: ${score}.67`);
+  showWarning(`score: ${score}`);
 });
